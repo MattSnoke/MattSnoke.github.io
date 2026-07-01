@@ -87,6 +87,7 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-
   margin-top:auto;
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:16px;
 }
 .sidebar .socials a{ display:flex; color:#F5F5F7; }
@@ -179,6 +180,51 @@ p{ color:var(--ink-soft); }
 .project-card h3{ font-family:var(--font-display); font-size:17px; font-weight:600; margin-bottom:8px; }
 .project-card p{ font-size:14px; margin-bottom:12px; }
 .project-card .links{ display:flex; gap:16px; font-family:var(--font-mono); font-size:13px; }
+
+/* ---------- CAROUSEL ---------- */
+.carousel{ position:relative; }
+.carousel-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  gap:16px;
+  border-radius:8px;
+  scrollbar-width:none;
+}
+.carousel-track::-webkit-scrollbar{ display:none; }
+.carousel-slide{
+  flex:0 0 100%;
+  scroll-snap-align:center;
+}
+.carousel-slide img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  border-radius:8px;
+  border:1px solid var(--line);
+}
+.carousel-caption{
+  margin-top:12px;
+  text-align:center;
+  font-size:14px;
+  color:var(--ink-soft);
+}
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:36px; height:36px;
+  border:none;
+  border-radius:50%;
+  background:rgba(29,29,31,0.55);
+  color:#FFFFFF;
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+}
+.carousel-btn:hover{ background:rgba(29,29,31,0.8); }
+.carousel-btn.prev{ left:8px; }
+.carousel-btn.next{ right:8px; }
 
 footer{
   font-family:var(--font-mono);

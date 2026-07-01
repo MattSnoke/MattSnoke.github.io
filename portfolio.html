@@ -40,22 +40,28 @@
   <!-- ============ MAIN CONTENT ============ -->
   <main>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-      <span class="tab">Portfolio</span>
+    <!-- VISUALIZATIONS -->
+    <section id="visualizations">
+      <span class="tab">Visualizations</span>
       <div class="card">
-        <div class="projects-grid">
-
-          <!-- EDIT: duplicate this .project-card block for each project you want to showcase -->
-          <div class="project-card">
-            <h3>Project Name</h3>
-            <p>One or two sentences on what it does and what you built it with.</p>
-            <div class="links">
-              <a href="#" target="_blank" rel="noopener">Live site</a>
-              <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Previous dashboard">&#8249;</button>
+          <div class="carousel-track">
+            <!-- EDIT: swap these placeholder images for real Tableau dashboard screenshots, and fill in each caption -->
+            <div class="carousel-slide">
+              <img src="images/dashboard-placeholder-1.svg" alt="Placeholder for Tableau dashboard screenshot 1">
+              <p class="carousel-caption">Caption placeholder 1</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="images/dashboard-placeholder-2.svg" alt="Placeholder for Tableau dashboard screenshot 2">
+              <p class="carousel-caption">Caption placeholder 2</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="images/dashboard-placeholder-3.svg" alt="Placeholder for Tableau dashboard screenshot 3">
+              <p class="carousel-caption">Caption placeholder 3</p>
             </div>
           </div>
-
+          <button class="carousel-btn next" aria-label="Next dashboard">&#8250;</button>
         </div>
       </div>
     </section>
@@ -65,5 +71,6 @@
 
 <footer>Built by Matt Snoke · Updated 2026</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
